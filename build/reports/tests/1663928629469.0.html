@@ -1,0 +1,215 @@
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="author" content="Andrei Solntsev">
+  <meta name="description" content="С чего начать?">
+  <meta name="keywords" content="Selenide, Selenium, WebDriver, Test automation, ATDD, concise UI tests, Селенид, Селениум, вебдрайвер, автоматизация тестирования, автотесты, ТДД, АТДД, лаконичные тесты">
+
+  <title>С чего начать?</title>
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/themes/ingmar/css/magnific-popup.css?001">
+  <link rel="stylesheet" href="/assets/themes/ingmar/css/pygment_trac.css?002">
+  <link rel="stylesheet" href="/assets/themes/ingmar/css/styles.css?004">
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml">
+
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ga/inpage_linkid.js" id="undefined"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="/assets/themes/ingmar/js/scale.fix.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.1/jquery-ui.min.js"></script>
+  <script src="/assets/themes/ingmar/js/jquery.magnific-popup.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-39031927-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</head>
+<body>
+  <h1 style="display: none">С чего начать?</h1>
+  <div class="head">
+  <div class="wrapper">
+    <header>
+
+      <a id="selenide-logo" href="/index.html">
+        <img src="/images/selenide-logo-big.png" alt="Selenide logo">
+      </a>
+
+      
+
+      <div class="main-menu">
+  
+  <div class="service-links">
+    <div id="languages">
+      <a id="lang_eng" href="https://selenide.org/quick-start.html">EN</a>
+      <a id="lang_rus" href="https://ru.selenide.org/quick-start.html">RU</a>
+    </div>
+  </div>
+  
+  <div class="main-menu-pages">
+    <a href="/quick-start.html">С чего начать?</a>
+    <a href="/documentation.html">Док</a>
+    <a href="/faq.html">ЧАВО</a>
+    <a href="/blog.html">Блог</a>
+    <a href="/javadoc.html">Javadoc</a>
+    <a href="/users.html">Пользователи</a>
+    <a href="/quotes.html">Отзывы</a>
+    <a style="display:none;" href="/thanks.html">Мы говорим спасибо</a>
+  </div>
+
+  <div class="news">
+    <div class="news-line news-title" style="display: block;"><a href="/2022/09/05/selenide-6.7.4/">Вышла Selenide 6.7.4</a></div>
+    <div class="news-line news-link" style="display: block;"><i>Опен-сорс - не резиновая попа</i></div>
+  </div>
+
+</div>
+
+    </header>
+    </div>
+  </div>
+
+  <div class="main">
+    <section>
+      
+<div class="short donate_header">
+  <div class="wrapper-color-content">
+    <h1 style="color: white; font-weight: bold; font-size: 200%;">Селенид поддерживает Украину 🇺🇦</h1>
+
+    <div>
+      <a style="color: yellow;" href="https://crisisrelief.un.org/t/ukraine">
+        💛 Пожертвовать Гуманитарному фонду ООН для Украины
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="short howto">
+  <div class="wrapper-color-content">
+    <h3>С чего начать?</h3>
+    <h4>Начать использовать Selenide очень просто. Не нужно читать тонны документации. Не нужно покупать тренинг.</h4>
+Просто добавь в проект <a href="https://search.maven.org/remotecontent?filepath=com/codeborne/selenide/6.7.4/selenide-6.7.4.jar">selenide.jar</a> (и его зависимости) и начинай писать тест.<br>
+
+  </div>
+</div>
+
+
+<div class="wrapper-content howto">
+  <section>
+    
+<p><a class="video right" href="https://vimeo.com/106867878">
+  Как написать UI тест за 10 минут
+</a></p>
+
+<h3 id="для-пользователей-maven">Для пользователей Maven:</h3>
+
+<p>Добавь в файл pom.xml:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.codeborne<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>selenide<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>6.7.4<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+<h3 id="для-пользователей-gradle">Для пользователей Gradle:</h3>
+
+<p>Добавь в файл build.gradle:</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>
+  <span class="n">testImplementation</span> <span class="s1">'com.codeborne:selenide:6.7.4'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="начинай-писать-тест">Начинай писать тест</h2>
+
+<p>Вот так просто! Больше никакой волокиты, начинай писать тест.</p>
+
+<p>Импортируй нужный класс:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">static</span> <span class="n">com</span><span class="o">.</span><span class="na">codeborne</span><span class="o">.</span><span class="na">selenide</span><span class="o">.</span><span class="na">Selenide</span><span class="o">.*;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">com</span><span class="o">.</span><span class="na">codeborne</span><span class="o">.</span><span class="na">selenide</span><span class="o">.</span><span class="na">Condition</span><span class="o">.*;</span>
+</code></pre></div></div>
+
+<p>и пиши тест:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">userCanLoginByUsername</span><span class="o">()</span> <span class="o">{</span>
+  <span class="n">open</span><span class="o">(</span><span class="s">"/login"</span><span class="o">);</span>
+  <span class="err">$</span><span class="o">(</span><span class="nc">By</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"user.name"</span><span class="o">)).</span><span class="na">setValue</span><span class="o">(</span><span class="s">"johny"</span><span class="o">);</span>
+  <span class="err">$</span><span class="o">(</span><span class="s">"#submit"</span><span class="o">).</span><span class="na">click</span><span class="o">();</span>
+  <span class="err">$</span><span class="o">(</span><span class="s">".loading_progress"</span><span class="o">).</span><span class="na">should</span><span class="o">(</span><span class="n">disappear</span><span class="o">);</span> <span class="c1">// Само подождёт, пока элемент исчезнет</span>
+  <span class="err">$</span><span class="o">(</span><span class="s">"#username"</span><span class="o">).</span><span class="na">shouldHave</span><span class="o">(</span><span class="n">text</span><span class="o">(</span><span class="s">"Hello, Johny!"</span><span class="o">));</span> <span class="c1">// Само подождёт, пока у элемента появится нужный текст</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>И готово!</p>
+
+<p>Можно использовать любой фреймворк по вкусу: JUnit, TestNG, Cucumber, ScalaTest, JBehave - что душа пожелает.</p>
+
+<p>Запускать как обычные юнит-тесты. Можно из IDE, можно ANT скриптом, можно “mvn test”.</p>
+
+<h3 id="хотите-увидеть-работающий-пример">Хотите увидеть работающий пример?</h3>
+
+<p>Мы создали группу <a href="https://github.com/selenide-examples">Selenide examples</a> на гитхабе, в которой будут различные примеры использования Selenide:</p>
+
+<ul>
+  <li>для тестирования <a href="https://github.com/selenide-examples/gmail/tree/master/test/org/selenide/examples/gmail">почтовика Gmail</a>,</li>
+  <li>для тестирования <a href="https://github.com/selenide-examples/google/blob/master/test/org/selenide/examples/google/selenide_page_object/GoogleTest.java">поиска Google</a>.</li>
+  <li>для тестирования настоящего <a href="https://github.com/selenide-examples/selenide-allure-junit/blob/master/src/test/java/org/selenide/examples/InternetBankTest.java">интернет-банка</a></li>
+  <li><a href="https://github.com/selenide-examples/hangman/blob/master/test/uitest/selenide/HangmanSpec.java">игра Виселица</a> - эталонный open-source проект, в котором используется Selenide</li>
+</ul>
+
+<p>и т.д.</p>
+
+<h3 id="поделитесь-с-нами-своими-примерами">Поделитесь с нами своими примерами!</h3>
+
+<p>Если у вас есть свои примеры использования Selenide, смело присылайте их нам!
+Нам было бы очень интересно на них взглянуть.</p>
+
+<h3 id="видеоурок">Видеоурок</h3>
+<iframe src="//player.vimeo.com/video/106867878" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p><a href="https://vimeo.com/106867878">Как написать UI тест за 10 минут</a> from <a href="https://vimeo.com/user20427140">Selenide</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>Туториал по Selenide</p>
+
+    <br>
+    <br>
+    
+  </section>
+</div>
+
+    </section>
+  </div>
+
+  <div class="foot">
+    <div class="wrapper">
+      <footer>
+        <p>
+        </p><div>The project is maintained by</div>
+        <a href="https://github.com/codeborne">
+          <img src="/images/codeborne-logo.png" width="300" height="49"></a>
+        <p></p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/assets/themes/ingmar/js/selenide.org.js"></script>
+
+
+</body></html>
