@@ -3,3 +3,5 @@ build
 target
 my-app.iws
 my-app.ipr
+src
+pom.xml
